@@ -1,0 +1,129 @@
+Enterprise Network Design Configuration
+Router#show running-config
+Building configuration...
+
+Current configuration : 1974 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+!
+ip dhcp pool ADMIN
+network 192.168.10.0 255.255.255.0
+default-router 192.168.10.1
+ip dhcp pool USERS
+network 192.168.20.0 255.255.255.0
+default-router 192.168.20.1
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2911/K9 sn FTX1524DKT3-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface Tunnel1
+ip address 10.1.1.1 255.255.255.0
+mtu 1476
+tunnel source GigabitEthernet0/1
+tunnel destination 10.0.0.2
+!
+!
+interface GigabitEthernet0/0
+no ip address
+duplex auto
+speed auto
+!
+interface GigabitEthernet0/0.10
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.0
+ip access-group 101 in
+standby 1 ip 192.168.1.254
+standby 1 priority 110
+standby 1 preempt
+!
+interface GigabitEthernet0/0.20
+encapsulation dot1Q 20
+ip address 192.168.20.1 255.255.255.0
+ip access-group 102 in
+standby 2 ip 192.168.1.253
+standby 2 priority 110
+standby 2 preempt
+!
+interface GigabitEthernet0/1
+ip address 10.0.0.1 255.255.255.0
+duplex auto
+speed auto
+!
+interface GigabitEthernet0/2
+ip address 203.0.113.1 255.255.255.0
+duplex auto
+speed auto
+!
+interface Vlan1
+no ip address
+shutdown
+!
+router ospf 1
+log-adjacency-changes
+network 192.168.1.0 0.0.0.255 area 0
+network 10.0.0.0 0.0.0.255 area 0
+network 203.0.113.0 0.0.0.255 area 0
+network 10.1.1.0 0.0.0.255 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+access-list 101 permit ip 192.168.1.0 0.0.0.255 192.168.1.0 0.0.0.255
+access-list 101 permit ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255
+access-list 101 permit ip 192.168.1.0 0.0.0.255 192.168.3.0 0.0.0.255
+access-list 101 deny ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255
+access-list 102 permit ip 192.168.2.0 0.0.0.255 any
+access-list 102 deny ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+login
+!
+!
+!
+end
+
