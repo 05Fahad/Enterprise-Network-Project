@@ -142,12 +142,12 @@ Router OSPF 1
 ## Testing & Verification
 
 ### Tested Scenarios
-- ✅ Intra-VLAN connectivity (Admin-to-Admin)
-- ✅ Inter-VLAN routing (Admin-to-User)
-- ✅ Branch office connectivity via tunnel
-- ✅ HSRP failover simulation
-- ✅ OSPF route convergence
-- ✅ ACL traffic filtering
+Intra-VLAN connectivity (Admin-to-Admin)
+Inter-VLAN routing (Admin-to-User)
+Branch office connectivity via tunnel
+HSRP failover simulation
+OSPF route convergence
+ACL traffic filtering
 
 ### Verification Commands
 ```
@@ -164,16 +164,16 @@ traceroute <destination>         # Verify path taken
 
 ## Skills Demonstrated
 
-✓ Enterprise network design and planning  
-✓ Cisco IOS configuration (Routers & Switches)  
-✓ VLAN design and inter-VLAN routing  
-✓ Dynamic routing protocols (OSPF)  
-✓ Router redundancy (HSRP/VRRP)  
-✓ VPN/Tunneling (GRE, IPSec-ready)  
-✓ DHCP/DNS/NAT configuration  
-✓ Access control lists (ACLs)  
-✓ Network security best practices  
-✓ Troubleshooting and verification  
+ Enterprise network design and planning  
+ Cisco IOS configuration (Routers & Switches)  
+ VLAN design and inter-VLAN routing  
+ Dynamic routing protocols (OSPF)  
+ Router redundancy (HSRP/VRRP)  
+ VPN/Tunneling (GRE, IPSec-ready)  
+ DHCP/DNS/NAT configuration  
+ Access control lists (ACLs)  
+ Network security best practices  
+ Troubleshooting and verification  
 
 ---
 
@@ -270,14 +270,14 @@ This network design is used by organizations for:
 
 ## Future Enhancements
 
-- [ ] Implement BGP for ISP peering
-- [ ] Add QoS for traffic prioritization
-- [ ] Configure EIGRP alternative to OSPF
-- [ ] Implement AAA with TACACS+
-- [ ] Add network monitoring (SNMP)
-- [ ] Configure Spanning Tree Protocol optimization
-- [ ] Add IPv6 support
-- [ ] Implement MPLS for QoS
+ Implement BGP for ISP peering
+ Add QoS for traffic prioritization
+ Configure EIGRP alternative to OSPF
+ Implement AAA with TACACS+
+ Add network monitoring (SNMP)
+ Configure Spanning Tree Protocol optimization
+ Add IPv6 support
+ Implement MPLS for QoS
 
 ---
 
