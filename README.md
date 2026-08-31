@@ -90,7 +90,7 @@ See `network-topology.png` for visual representation
 - `ISP-Router-config.txt` - ISP gateway simulation
 
 ### Network Details
-```
+
 HQ Site:
   Router 1: 192.168.1.1 (VLAN 10), 192.168.1.2 (VLAN 20), 10.0.0.1 (Branch link), 203.0.113.1 (ISP)
   Router 2: 192.168.2.1 (VLAN 10), 192.168.2.2 (VLAN 20), 203.0.114.2 (ISP)
@@ -106,14 +106,14 @@ ISP Link:
 GRE Tunnel:
   HQ Endpoint: 10.1.1.1
   Branch Endpoint: 10.1.1.2
-```
+
 
 ---
 
 ## Routing Protocols
 
 ### OSPF Configuration
-```
+
 Router OSPF 1
   Area 0 (Backbone)
   Networks: 192.168.1.0, 192.168.2.0, 192.168.3.0, 10.0.0.0, 10.1.1.0, 203.0.113.0, 203.0.114.0
@@ -121,7 +121,7 @@ Router OSPF 1
   Automatic failover routing
 ```
 
----
+```
 
 ## Security Implementation
 
@@ -155,7 +155,7 @@ OSPF route convergence
 ACL traffic filtering
 
 ### Verification Commands
-```
+
 show ip route                    # Verify OSPF routes
 show standby brief               # Check HSRP status
 show ip ospf neighbor            # Verify OSPF adjacencies
@@ -166,6 +166,7 @@ traceroute <destination>         # Verify path taken
 ```
 
 ---
+```
 
 ## Skills Demonstrated
 
@@ -195,7 +196,7 @@ traceroute <destination>         # Verify path taken
 
 ## Files in This Repository
 
-```
+
 Enterprise-Network-Project/
 ├── README.md                          # This file
 ├── network-topology.png               # Network diagram
@@ -209,6 +210,7 @@ Enterprise-Network-Project/
     ├── routing-table.png              # OSPF routing table
     └── hsrp-status.png                # HSRP failover status
 ```
+
 
 ---
 
@@ -273,18 +275,7 @@ This network design is used by organizations for:
 
 ---
 
-## Future Enhancements
-
- Implement BGP for ISP peering
- Add QoS for traffic prioritization
- Configure EIGRP alternative to OSPF
- Implement AAA with TACACS+
- Add network monitoring (SNMP)
- Configure Spanning Tree Protocol optimization
- Add IPv6 support
- Implement MPLS for QoS
-
----
+```
 
 ## Requirements
 
@@ -304,7 +295,7 @@ This project demonstrates my proficiency in:
 - VPN implementation
 - Network security
 
-**Perfect for IT Network Engineer roles!**
+
 
 ---
 
@@ -315,6 +306,6 @@ This project is provided for educational purposes.
 ---
 
 **Created**: August 2026  
-**Project Duration**: 25-30 hours  
+**Project Duration**: 20 hours  
 **Skill Level**: Intermediate to Advanced  
-**Status**: Complete and Fully Functional ✅
+**Status**: Complete and Fully Functional 
