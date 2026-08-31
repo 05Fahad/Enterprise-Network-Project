@@ -192,17 +192,17 @@ traceroute <destination>         # Verify path taken
 
 ```
 Enterprise-Network-Project/
-├── README.md                          # This file
-├── network-topology.png               # Network diagram
-├── HQ-R1-config.txt                   # HQ Router 1 running config
-├── HQ-R2-config.txt                   # HQ Router 2 running config
-├── Branch-Router-config.txt           # Branch router running config
-├── ISP-Router-config.txt              # ISP router running config
-├── enterprise-network.pkt             # Packet Tracer file
-└── screenshots/
-    ├── topology.png                   # Full network topology
-    ├── routing-table.png              # OSPF routing table
-    └── hsrp-status.png                # HSRP failover status
+README.md                          # This file
+network-topology.png               # Network diagram
+HQ-R1-config.txt                   # HQ Router 1 running config
+HQ-R2-config.txt                   # HQ Router 2 running config
+Branch-Router-config.txt           # Branch router running config
+ISP-Router-config.txt              # ISP router running config
+Enterprise-network.pkt             # Packet Tracer file
+screenshots/
+topology.png                   # Full network topology
+ routing-table.png              # OSPF routing table
+hsrp-status.png                # HSRP failover status
 ```
 
 ---
@@ -216,21 +216,12 @@ Enterprise-Network-Project/
 4. Simulate router failures to observe HSRP failover
 5. Analyze OSPF route calculations
 
-### For Interview Preparation
-- Explain the redundancy design (HSRP)
-- Walk through GRE tunnel configuration
-- Discuss VLAN segmentation strategy
-- Describe OSPF area 0 setup
-- Explain ACL traffic filtering
-
 ### For Lab Enhancement
 - Add more subnets and VLANs
 - Implement BGP for ISP simulation
 - Add QoS for voice/video prioritization
 - Configure OSPF areas for larger networks
 - Add AAA authentication
-
----
 
 ## Technologies & Concepts
 
@@ -266,21 +257,6 @@ This network design is used by organizations for:
 - Network redundancy and failover
 - Traffic segmentation and security
 
----
-
-## Future Enhancements
-
-- [ ] Implement BGP for ISP peering
-- [ ] Add QoS for traffic prioritization
-- [ ] Configure EIGRP alternative to OSPF
-- [ ] Implement AAA with TACACS+
-- [ ] Add network monitoring (SNMP)
-- [ ] Configure Spanning Tree Protocol optimization
-- [ ] Add IPv6 support
-- [ ] Implement MPLS for QoS
-
----
-
 ## Requirements
 
 - **Cisco Packet Tracer 9.0.0** or later
@@ -299,9 +275,6 @@ This project demonstrates my proficiency in:
 - VPN implementation
 - Network security
 
-**Perfect for IT Network Engineer roles!**
-
----
 
 ## License
 
