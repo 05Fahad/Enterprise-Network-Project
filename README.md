@@ -8,11 +8,16 @@ A comprehensive **multi-site enterprise network** designed and implemented in Ci
 
 ## Network Architecture
 
-### Site Layout
-- **HQ Site**: 200+ users across 2 VLANs (Admin & Users)
-- **Branch Office**: 50 users in separate VLAN
-- **DMZ**: Dedicated segment for Web & Email servers
-- **Internet**: Dual ISP uplinks for redundancy
+### Actual Test Setup
+- **HQ Site**: 3 Admin PCs (VLAN 10) + 3 User PCs (VLAN 20) + 2 Servers
+- **Branch Office**: 2 PCs in separate VLAN
+- **Routers**: 4 total (HQ-R1, HQ-R2, Branch-Router, ISP-Router)
+- **Switches**: 3 total (HQ-S1, HQ-S2, Branch-Switch)
+
+### Designed Capacity (Scalable)
+- **HQ Site**: 250+ users across 2 VLANs
+- **Branch Office**: 50+ users in separate VLAN
+- **DHCP Pools**: 254 addresses per VLAN
 
 ### Topology Diagram
 See `network-topology.png` for visual representation
